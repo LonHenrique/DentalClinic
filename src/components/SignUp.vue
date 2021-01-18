@@ -2,23 +2,22 @@
   <b-container fluid>
     <main>
       <section class="glass">
-        <b-row class="">
+        <b-row>
           <b-col>
-            <div class="my-lg-5 my-sm-3 mx-3">
+            <div class="my-5 mx-3">
               <h3>Seja Bem Vindo - Efetue seu cadastro.</h3>
             </div>
           </b-col>
         </b-row>
-        <b-row>
-           <b-col>
-                <b-form inline class="mx-5 my-3 alignFormInputs" id="cadastrar">  
+        <b-form class="mx-2" id="cadastrar">  
+            <b-row>
+                <b-col cols="4">
                     <b-form-group
                         id="nome"                                    
                         v-model="nome"
                         label-for="nome"
                         description="Digite seu nome completo."
-                        class="was-validated my-3"
-                        
+                        class="was-validated mx-2 my-3"                        
                     >
                         <b-form-input 
                             class="p-2 w-100"
@@ -30,7 +29,8 @@
                         >
                         </b-form-input>                    
                     </b-form-group>
-
+                </b-col>
+                <b-col cols="4">
                     <b-form-group
                         id="email"                                    
                         v-model="email"
@@ -49,7 +49,8 @@
                         >
                         </b-form-input>                    
                     </b-form-group>
-                    
+                </b-col> 
+                <b-col cols="4">
                     <b-form-group
                         id="cpf"                                    
                         v-model="cpf"
@@ -68,6 +69,10 @@
                         >
                         </b-form-input>                    
                     </b-form-group>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols="4">
                     <b-form-group
                         id="telefone"                                    
                         v-model="telefone"
@@ -86,6 +91,8 @@
                         >
                         </b-form-input>                    
                     </b-form-group>
+                </b-col>
+                <b-col cols="4">
                     <b-form-group
                         id="cidade"                                    
                         v-model="cidade"
@@ -104,6 +111,8 @@
                         >
                         </b-form-input>                    
                     </b-form-group>
+                </b-col>
+                <b-col cols="4">
                     <b-form-group
                         id="estado"                                    
                         v-model="estado"
@@ -128,7 +137,10 @@
                             <option v-for="estado in estados" :key="estado.id">{{ estado }}</option>
                         </datalist>               
                     </b-form-group>
-
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols="4">
                     <b-form-group
                         id="area"                                    
                         v-model="area"
@@ -153,14 +165,14 @@
                             <option v-for="area in areas" :key="area.id">{{ area }}</option>
                         </b-datalist>               
                     </b-form-group>
-
+                </b-col>
+                <b-col cols="4">
                     <b-form-group
                         id="senha"                                    
                         v-model="senha"
                         label-for="senha"
                         description="Informe uma senha."
-                        class="was-validated mx-2 my-3"
-                        
+                        class="was-validated mx-2 my-3"                        
                     >
                         <b-form-input 
                             class="p-2 w-100"
@@ -172,6 +184,8 @@
                         >
                         </b-form-input>                    
                     </b-form-group>
+                </b-col>
+                <b-col cols="4">                    
                     <b-form-group
                         id="confirmarsenha"                                    
                         v-model="confirmasenha"
@@ -190,23 +204,20 @@
                         >
                         </b-form-input>                    
                     </b-form-group>                                                   
-                </b-form>
-           </b-col>
-        </b-row>
+                </b-col>           
+            </b-row>
+        </b-form>
         <b-row>
-            <b-col>               
+            <b-col>
                 <b-form-group class="alignInputSubmit my-2">
                     <b-button class="btnLoggin mt-3" id="cadastrar" type="submit" variant="primary">Cadastrar</b-button>                                    
                 </b-form-group> 
             </b-col>
         </b-row>
-        
-
-        
 
         <b-row class="d-flex">
           <b-col class="links">
-            <b-link to="/Login">Voltar</b-link>
+            <b-link to="/">Voltar</b-link>
           </b-col>
         </b-row>
       </section>
@@ -251,17 +262,12 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 .alignInputSubmit {
   display: flex;
-  justify-content: center;  
-  
+  justify-content: center;    
 }
 
-.alignFormInputs{     
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 h3 {
   text-align: center;
   font-size: 25px;
@@ -285,8 +291,7 @@ main {
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.3)
   );
-  border-radius: 1.5rem;
-  z-index: 2;
+  border-radius: 1.5rem;  
   padding: 1%;
   box-shadow: 6px 6px 6px rgba(122, 122, 122, 0.2);
   backdrop-filter: blur(2rem);
@@ -297,7 +302,7 @@ main {
   background: #007bff;
   border: none;
   padding: 10px;
-  min-width: 18rem;
+  min-width: 300px;
   line-height: 30px;
   font-size: 16px;
   text-transform: uppercase;

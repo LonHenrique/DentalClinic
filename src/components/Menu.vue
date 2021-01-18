@@ -2,16 +2,21 @@
   <b-container>
     <b-navbar toggleable="lg" type="light">
       <b-navbar-brand href="#">
-        <b-img
-          src="./src/assets/logoDentalSci.png"
-          fluid
+        <b-img 
+          src="./src/assets/logoDentalSci.png" 
+          fluid 
           alt="Logo-DentalSci"
         ></b-img>
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"> </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="mx-auto fontDentalSciMenu">
-          <b-nav-item :to="menu.link" v-for="menu of menu" :key="menu.id" :class="menu.title">{{ menu.title }}</b-nav-item>          
+         <a href="#Home">Home</a>
+         <a href="#Recursos">Recursos</a>
+         <a href="#Colaboradores">Colaboradores</a>
+         <a href="#Vantagens">Vantagens</a>
+         <a href="#Faleconosco">Fale Conosco</a>
+                   
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -22,8 +27,8 @@
               <b-icon icon="people-fill" scale="0.7" aria-hidden="true"></b-icon>
               Mais
             </template>
-            <b-dropdown-item-button variant="secondary" v-for="dropdown in dropdown" :key="dropdown.id">                              
-              <b-icon :icon=dropdown.icon scale="0.7" aria-hidden="true"><b-icon-link :to=menu.link></b-icon-link></b-icon>{{ dropdown.title }}
+            <b-dropdown-item-button variant="secondary" v-for="dropdown in dropdown" :key="dropdown.id"> 
+              <b-nav-item :to="dropdown.link">{{ dropdown.title }}</b-nav-item>                                           
             </b-dropdown-item-button>                 
           </b-dropdown>
         </b-navbar-nav>
@@ -39,18 +44,18 @@ export default {
 
     return{
       menu: [
-        { title: 'home', link: ''},
-        { title: 'recursos', link: '/Login'},
-        { title: 'colaboradores', link: '/SignUp'},
-        { title: 'vantagens', link: ''},
-        { title: 'fale conosco', link: '/Login'},
+        { title: 'home', link: 'Home'},
+        { title: 'recursos', link: 'Recursos'},
+        { title: 'colaboradores', link: 'Colaboradores'},
+        { title: 'vantagens', link: 'Vantagens'},
+        { title: 'fale conosco', link: 'FaleConosco'},
       ],
       dropdown: [
-        { title: 'Entrar', icon:'person-fill', link: 'Login'},
-        { title: 'Cadastre-se', icon:'person-plus-fill', link: 'SignUp'},
+        { title: 'Entrar', icon:'person-fill', link: '/Login'},
+        { title: 'Cadastre-se', icon:'person-plus-fill', link: '/SignUp'},
       ],
     }
-  }
+  }  
 };
 
 </script>
