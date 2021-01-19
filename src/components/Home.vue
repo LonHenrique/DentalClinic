@@ -1,7 +1,7 @@
 <template>    
     <main>
         <div class="container">
-            <section id="Home">
+            <section class="relative" id="Home">
                 <div class="row bg-image mySession">                    
                     <b-col class="col-md-5 col-sm my-5">
                         <div class="row my-5 mx-2">
@@ -23,18 +23,18 @@
                 </div>
             </section>
 
-            <div class="row bg-info mySession">
+            <div class="row mySession">
 
-                <section class="#Recursos">
+                <section>
                     <div id="Recursos">
-                        <!-- Importar o componente da sessão Recursos -->
+                        <my-resources></my-resources>
                     </div>
                 </section>
 
             </div>
-            <div class="row bg-warning mySession">
+            <div class="row bg-warning">
 
-                <section class="#Colaboradores">
+                <section class="mySession">
                     <div id="Colaboradores">
                         <!-- Importar o componente da sessão Colaboradores -->
                     </div>
@@ -42,9 +42,9 @@
 
             </div>
 
-            <div class="row bg-danger mySession">
+            <div class="row bg-danger">
 
-                <section class="#Vantagens">
+                <section class="mySession">
                     <div id="Vantagens">
                         <!-- Importar o componente da sessão Vantagens -->
                     </div>
@@ -66,23 +66,30 @@
 </template>
 
 <script>
+
+import Recursos from './session/Recursos.vue';
+
     export default {
-        
+        components: {
+            'my-resources': Recursos,
+        }
     }
 </script>
 
 <style scoped>
 
 .fontFamily{
-    font-family: 'Poppins', serif;
-    
+    font-family: 'Poppins', serif;   
+}
+.relative {
+    position: relative;
 }
 
 .mySession {     
-    margin-bottom: 11%;    
-    margin-top: 8%;
+    margin-bottom: 12%;    
+    margin-top: 5%;
     height: 500px;            
-    background-color: #ccc;    
+ 
 }
 
 .bg-image{    

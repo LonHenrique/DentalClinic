@@ -11,17 +11,11 @@
       <b-navbar-toggle target="nav-collapse"> </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="mx-auto fontDentalSciMenu">
-         <a href="#Home">Home</a>
-         <a href="#Recursos">Recursos</a>
-         <a href="#Colaboradores">Colaboradores</a>
-         <a href="#Vantagens">Vantagens</a>
-         <a href="#Faleconosco">Fale Conosco</a>
-                   
+          <b-nav-item :href="menu.href" v-for="menu in menus" :key="menu.id">{{ menu.title }}</b-nav-item>          
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="mx-auto fontDentalSciMenu">
-          
+        <b-navbar-nav class="mx-auto fontDentalSciMenu">          
           <b-dropdown variant="outline-info block" size="md">
             <template #button-content>
               <b-icon icon="people-fill" scale="0.7" aria-hidden="true"></b-icon>
@@ -43,16 +37,16 @@ export default {
   data() {
 
     return{
-      menu: [
-        { title: 'home', link: 'Home'},
-        { title: 'recursos', link: 'Recursos'},
-        { title: 'colaboradores', link: 'Colaboradores'},
-        { title: 'vantagens', link: 'Vantagens'},
-        { title: 'fale conosco', link: 'FaleConosco'},
+      menus: [
+        { title: 'home', href: '#Home'},
+        { title: 'recursos', href: '#Recursos'},
+        { title: 'colaboradores', href: '#Colaboradores'},
+        { title: 'vantagens',  href: '#Vantagens'},
+        { title: 'fale conosco',  href: '#Faleconosco'}
       ],
       dropdown: [
-        { title: 'Entrar', icon:'person-fill', link: '/Login'},
-        { title: 'Cadastre-se', icon:'person-plus-fill', link: '/SignUp'},
+        { title: 'Entrar', link: '/Login'},
+        { title: 'Cadastre-se', link: '/SignUp'},
       ],
     }
   }  
