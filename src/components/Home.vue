@@ -1,7 +1,7 @@
 <template>    
     <main>
-        <div class="container">
-            <section class="relative" id="Home">
+        <div class="container-lg">
+            <section id="Home">
                 <div class="row bg-image mySession">                    
                     <b-col class="col-md-5 col-sm my-5">
                         <div class="row my-5 mx-2">
@@ -22,9 +22,9 @@
                     </b-col>                    
                 </div>
             </section>
+        </div>
 
-            <div class="row mySession">
-
+            <div class ="d-flex container mySession sessionItems">
                 <section>
                     <div id="Recursos">
                         <my-resources></my-resources>
@@ -32,11 +32,11 @@
                 </section>
 
             </div>
-            <div class="row bg-warning">
+            <div class="row mySessions">
 
-                <section class="mySession">
+                <section>
                     <div id="Colaboradores">
-                        <!-- Importar o componente da sessão Colaboradores -->
+                        <my-contributors></my-contributors>
                     </div>
                 </section>
 
@@ -68,10 +68,12 @@
 <script>
 
 import Recursos from './session/Recursos.vue';
+import Colaboradores from './session/Colaboradores.vue';
 
     export default {
         components: {
             'my-resources': Recursos,
+            'my-contributors': Colaboradores,
         }
     }
 </script>
@@ -92,9 +94,7 @@ import Recursos from './session/Recursos.vue';
  
 }
 
-.bg-image{    
-    
-    background-color: #ccc;     
+.bg-image{       
     background-image: url('../../src/assets/sorrisoFeminino.jpeg');    
     background-repeat: no-repeat;
     background-position: center;
@@ -146,6 +146,12 @@ p{
 .btnAssign:hover {
     background: #32a3f3;            
     
+}
+
+.sessionItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media (min-width:770px) and (max-width:990px ){
     
