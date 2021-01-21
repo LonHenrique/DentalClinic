@@ -1,28 +1,25 @@
 <template>
   <div>
-    <my-menu></my-menu>    
-    <router-view></router-view>
-    <home-page></home-page>
+    <my-menu></my-menu>        
+    <router-view />
   </div>
   
 </template>
 
 <script>
+// import { routes } from './routes/routes.js';
 import Menu from './components/Menu.vue';
-import Home from './components/Home.vue';
-
 
 export default {
 	
   components:{
 		'my-menu': Menu,
-    'homePage': Home,
     
   },
   
   data () {
     return {      
-      
+      routes
     }
   }
 }

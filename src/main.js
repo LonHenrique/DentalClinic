@@ -13,7 +13,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const router = new VueRouter({
-  routes : routes
+  routes : routes,
+  mode: 'history'
+  
 });
 
 // Servir as rotas da aplicação

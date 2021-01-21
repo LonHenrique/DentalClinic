@@ -22,8 +22,9 @@
               Mais
             </template>
             <b-dropdown-item-button variant="secondary" v-for="dropdown in dropdown" :key="dropdown.id"> 
-              <b-nav-item :to="dropdown.link">{{ dropdown.title }}</b-nav-item>                                           
-            </b-dropdown-item-button>                 
+              <router-link :to="dropdown.link">{{ dropdown.title }}</router-link>              
+              <b-dropdown-divider></b-dropdown-divider>                 
+            </b-dropdown-item-button>
           </b-dropdown>
         </b-navbar-nav>
       </b-collapse>

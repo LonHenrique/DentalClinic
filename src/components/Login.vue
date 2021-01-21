@@ -59,10 +59,10 @@
                         
                         
                         <b-row class="d-flex">
-                            <b-col class=" d-flex links">    
-                                <b-link to="/SignUp">Cadastre-se</b-link>
-                                <b-link to="/SignUp">Esqueceu a senha?</b-link>
-                                <b-link to="/SignUp">Voltar</b-link>
+                            <b-col class=" d-flex links">                                
+                                <router-link to="/SignUp"> Cadastre-se </router-link>                                
+                                <router-link to="#"> Esqueceu a senha? </router-link>                                
+                                <router-link to="/"> Voltar </router-link>                                
                             </b-col>                            
                         </b-row>
                         </div>
@@ -76,6 +76,9 @@
 <script>
 export default {
 
+    data: {
+
+    }
     
 };
 </script>
