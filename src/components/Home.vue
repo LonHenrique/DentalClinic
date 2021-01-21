@@ -59,9 +59,7 @@
                         <!-- Importar o componente da sessão Fale Conosco -->
                     </div>
                 </section>
-
-            </div>
-        </div>
+            </div>        
     </main>    
 </template>
 

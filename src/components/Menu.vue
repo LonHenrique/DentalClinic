@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-navbar toggleable="lg" type="light">
-      <b-navbar-brand href="#">
+      <b-navbar-brand to="/">
         <b-img 
           src="./src/assets/logoDentalSci.png" 
           fluid 
@@ -28,7 +28,7 @@
           </b-dropdown>
         </b-navbar-nav>
       </b-collapse>
-    </b-navbar>
+    </b-navbar>    
   </b-container>
 </template>
 
@@ -39,7 +39,7 @@ export default {
 
     return{
       menus: [
-        { title: 'home', href: '#Home'},
+        { title: 'home', href: '/'},
         { title: 'recursos', href: '#Recursos'},
         { title: 'colaboradores', href: '#Colaboradores'},
         { title: 'vantagens',  href: '#Vantagens'},
