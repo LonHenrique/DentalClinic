@@ -15,9 +15,7 @@
                             </p>
                         </div>
                         <div>
-                            <div class="d-flex btnAssignAlign">   
-                                <input type="button" value="assine agora" class="fontFamily btnAssign">
-                            </div>
+                            <btn-assign></btn-assign>
                         </div>
                     </b-col>                    
                 </div>
@@ -32,8 +30,7 @@
                 </section>
 
             </div>
-            <div class="row mySessions">
-
+            <div>
                 <section>
                     <div id="Colaboradores">
                         <my-contributors></my-contributors>
@@ -42,21 +39,21 @@
 
             </div>
 
-            <div class="row bg-danger">
+            <div class=" ">
 
-                <section class="mySession">
+                <section class="">
                     <div id="Vantagens">
-                        <!-- Importar o componente da sessão Vantagens -->
+                        <my-benefits></my-benefits>
                     </div>
                 </section>
 
             </div>
 
-            <div class="row bg-dark mySession">
+            <div class="mySession">
 
                 <section class="#Faleconosco">
                     <div id="Faleconosco">
-                        <!-- Importar o componente da sessão Fale Conosco -->
+                        <my-contact-us></my-contact-us>
                     </div>
                 </section>
             </div>        
@@ -67,29 +64,31 @@
 
 import Recursos from './session/Recursos.vue';
 import Colaboradores from './session/Colaboradores.vue';
+import Vantagens from './session/Vantagens.vue';
+import Botao from '../components/shared/botao/Botao.vue';
+import FaleConosco from '../components/session/FaleConosco.vue';
 
     export default {
         components: {
             'my-resources': Recursos,
             'my-contributors': Colaboradores,
+            'my-benefits' : Vantagens,
+            'btn-assign': Botao,
+            'my-contact-us': FaleConosco
         }
     }
 </script>
 
 <style scoped>
+.mySession{
+    background-color: #222;
+}
 
 .fontFamily{
     font-family: 'Poppins', serif;   
 }
 .relative {
     position: relative;
-}
-
-.mySession {     
-    margin-bottom: 12%;    
-    margin-top: 5%;
-    height: 500px;            
- 
 }
 
 .bg-image{       

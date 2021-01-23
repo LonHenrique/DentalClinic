@@ -112,7 +112,7 @@ img {
 }
 
 .overlay {
-  margin-bottom: 12%;  
+  margin-bottom: 10%;  
   height: 600px;  
  
   
@@ -123,5 +123,6 @@ img {
   background-position: center;
   background-size: cover;
   position: relative;  
+  margin-top: 10%;
 }
 </style>
