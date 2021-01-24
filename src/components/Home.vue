@@ -22,7 +22,7 @@
             </section>
         </div>
 
-            <div class ="d-flex container mySession sessionItems">
+            <div class ="d-flex container sessionItems">
                 <section>
                     <div id="Recursos">
                         <my-resources></my-resources>
@@ -39,18 +39,15 @@
 
             </div>
 
-            <div class=" ">
-
-                <section class="">
+            <div>
+                <section>
                     <div id="Vantagens">
                         <my-benefits></my-benefits>
                     </div>
                 </section>
-
             </div>
 
             <div class="mySession">
-
                 <section class="#Faleconosco">
                     <div id="Faleconosco">
                         <my-contact-us></my-contact-us>
