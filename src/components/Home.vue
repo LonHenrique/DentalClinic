@@ -77,8 +77,10 @@ import FaleConosco from '../components/session/FaleConosco.vue';
 </script>
 
 <style scoped>
+
 .mySession{
     background-color: #222;
+    margin-top: 13%;
 }
 
 .fontFamily{
