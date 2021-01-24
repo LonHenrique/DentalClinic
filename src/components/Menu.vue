@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <b-navbar toggleable="lg" type="light">
+    <b-navbar toggleable="lg" class="myVariant" fixed="top">
       <b-navbar-brand to="/">
         <b-img 
           src="./src/assets/logoDentalSci.png" 
@@ -62,6 +62,11 @@ export default {
   text-transform: uppercase;
   font-size: 14px;
   color: #222;  
+}
+
+.myVariant{
+  background-color: #fff;
+  box-shadow: 6px 6px 6px rgba(122, 122, 122, 0.2);
 }
 
 </style>
