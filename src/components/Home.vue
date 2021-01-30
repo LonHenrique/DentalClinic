@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <main>
     <div>
@@ -60,6 +61,65 @@
       </div>
     </div>
   </main>
+=======
+<template>    
+    <main>
+        <div class="container-lg">
+            <section id="Home">
+                <div class="row bg-image mySession">                    
+                    <b-col class="col-md-5 col-sm my-5">
+                        <div class="row my-5 mx-2">
+                            <h4 class="fontFamily fontSessionHome"><strong>inteligência clínica </strong><br>Atualização e
+                                planejamento clínico</h4>
+                            <h1 class="myH1Session">DentalSci</h1>
+                            <p class="fontFamily">
+                                DentalSci é um sistema especialista em ortodontia, ATM, odontopediatria, ortopedia funcional
+                                e cirurgia bucomaxilofacial, desenvolvido para atualizar o profissional e auxiliar no
+                                planejamento dos casos com base nas melhores práticas clínicas.
+                            </p>
+                        </div>
+                        <div>
+                            <btn-assign></btn-assign>
+                        </div>
+                    </b-col>                    
+                </div>
+            </section>
+        </div>
+
+            <div class ="d-flex container sessionItems">
+                <section>
+                    <div id="Recursos">
+                        <my-resources></my-resources>
+                    </div>
+                </section>
+
+            </div>
+            <div>
+                <section>
+                    <div id="Colaboradores">
+                        <my-contributors></my-contributors>
+                    </div>
+                </section>
+
+            </div>
+
+            <div>
+                <section>
+                    <div id="Vantagens">
+                        <my-benefits></my-benefits>
+                    </div>
+                </section>
+            </div>
+
+            <div class="mySession">
+                <section class="#Faleconosco">
+                    <div id="Faleconosco">
+                        <my-contact-us></my-contact-us>
+                    </div>
+                </section>
+            </div>        
+    </main>    
+>>>>>>> fa27ecfcc4027312fbaf2368fe83e964266e9c77
 </template>
 
 <script>
@@ -83,9 +143,16 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .mySession {
   background-color: #222;
   margin-top: 15em;
+=======
+
+.mySession{
+    background-color: #222;
+    margin-top: 13%;
+>>>>>>> fa27ecfcc4027312fbaf2368fe83e964266e9c77
 }
 
 .fontFamily {
