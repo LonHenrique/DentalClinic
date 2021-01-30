@@ -1,21 +1,14 @@
 <template>
-  <div>
-    <my-menu></my-menu>        
-    <router-view />
+  <div>    
+    <router-view/>
   </div>
   
 </template>
 
 <script>
-// import { routes } from './routes/routes.js';
-import Menu from './components/Menu.vue';
+import { routes } from './routes/routes.js';
 
 export default {
-	
-  components:{
-		'my-menu': Menu,
-    
-  },
   
   data () {
     return {      

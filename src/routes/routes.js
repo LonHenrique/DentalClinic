@@ -6,14 +6,25 @@ import SignUp from '../components/SignUp.vue';
 export const routes = [
     {
         path: '/', 
-        component: Home
+        component: Home,
+        name: 'home',
+        menu: false
     },
     {
         path: '/Login', 
-        component: Login
+        component: Login,
+        name: 'login',
+        menu: true
     },
     {
         path: '/SignUp', 
-        component: SignUp
+        component: SignUp,
+        name: 'signup',
+        menu: true
     },
+    {
+        path: '*',
+        component: Home,
+        menu: false
+    }
 ]

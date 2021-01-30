@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <b-row>
-      <b-col cols="6" class="alignSession">
+      <b-col class="col-lg-6 col-md alignSession">
         <b-row>
           <b-col cols="4" v-for="icone in icones" :key="icone.id" class="my-1">
             <b-img :src="icone.src" class="icons"></b-img>
           </b-col>
         </b-row>
       </b-col>
-      <b-col cols="6" class="alignSession">
+      <b-col class="col-lg-6 col-md alignSession">
         <h4>Lorem ipsum dolor sit amet consectetur</h4>
         <p class="pfonte">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
@@ -117,5 +117,25 @@ h4 {
 }
 h1,h4,p {
     font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width:768px) and (max-width:1024px ){
+	.icons {
+		text-align: center;
+		background-color: #fff;
+		padding: 10%;
+		width: 70px;
+		height: 65px;
+		box-shadow: 1px 10px 30px rgba(132, 144, 255, 0.3);
+		margin-top: 5em;
+		
+	}
+
+	.pfonte {
+		color: #777;  
+		font-size: 16px;
+		margin: 0em 0em 2em 0em;
+		text-align: justify;
+	}
 }
 </style>

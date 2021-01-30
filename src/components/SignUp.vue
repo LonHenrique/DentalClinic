@@ -285,7 +285,7 @@ main {
 
 .glass {
   background: #fff;
-  width: 50%;
+  width: 75%;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -315,5 +315,21 @@ main {
 .links {
   text-align: center;
   margin-top: 10px;  
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .glass{
+        background: #fff;    
+        width: 80%;
+        background: linear-gradient(
+            to right bottom,
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3)
+        );
+        border-radius: 1.5rem;     
+        padding: 1%;
+        box-shadow: 6px 6px 6px rgba(122, 122, 122, 0.2);
+        backdrop-filter: blur(2rem);        
+    }
 }
 </style>
