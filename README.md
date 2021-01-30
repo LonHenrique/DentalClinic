@@ -1,4 +1,4 @@
-# dentalsci
+# DentalClinic
 
 > sistema de gerenciamento dentário
 
